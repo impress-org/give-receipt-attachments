@@ -1,2 +1,36 @@
-# give-receipt-attachments
-An Add-on for the Give Donation plugin for WordPress. 
+# GIVE Receipt Attachments
+A [Give](https://givewp.com) Addon which allows you to add a file to any Give donation form and have it appear for your donors to download via the donation confirmation page and/or email donation receipt.
+
+## Features
+
+* Choose custom title text for the confirmation page
+* Choose custom link text for the attachment
+* Upload your file via the Media Library Uploader
+* Optionally set a minimum donation amount per form for the Attachment to be available to the donor.
+* Add the link to your Admin notification email and/or the Donation receipt email via a custom Email tag.
+* Forms that don't have uploads are not affected in any way.
+
+## Screenshots
+
+*Configure your Gift via the "Give a Gift for Donating" metabox on your Give form:*
+
+![GIVE-RA Form Settings](assets/ggfd-metabox.jpg)
+
+*The Gift Title and Download link as seen on the Donation Confirmation page*
+
+![GIVE-RA Attachment link on Donation Confirmation page](assets/ggfd-donation-confirmation.jpg)
+
+*Add the email tag {attachmenturl} to your donation receipt email for your donors to download straight from their email*
+
+![GIVE-RA Email Tag settings](assets/ggfd-email-tag.jpg)
+
+*The Attachment download link as seen in the Donor Email Receipt*
+
+![GIVE-RA on Email Receipt](assets/ggfd-email-receipt.jpg)
+
+## About Matt Cromwell
+
+I'm Head of Support and Community Outreach at [WordImpress](https://wordimpress.com). I build custom plugins and themes and blog regularly at [mattcromwell.com](https://www.mattcromwell.com).
+
+## About Give
+Give is the leading Donation Plugin for WordPress. Within one year Give received over 100 5-star reviews, and 10,000 active installs. Give is actively developed and supported. Find out more at [givewp.com](https://givewp.com). Read about our [Give Stories here](https://givewp.com/category/give-stories).
