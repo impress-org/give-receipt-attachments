@@ -43,4 +43,4 @@ I'm Head of Support and Community Outreach at [WordImpress](https://wordimpress.
 If you are enjoying [Give Receipt Attachments](https://www.mattcromwell.com/products/give-receipt-attachments) please consider giving a donation to support my free plugin and theme development. All donations provided through my website go to [help San Diego nonprofit organizations with their hosting and web maintenance](https://www.mattcromwell.com/help-me-help-others/).
 
 ## ABOUT GIVE
-Give is the leading Donation Plugin for WordPress. Within one year Give received over 100 5-star reviews, and 10,000 active installs. Give is actively developed and supported. Find out more at [givewp.com](https://givewp.com). Read about our [Give Stories here](https://givewp.com/category/give-stories).
+[Give](https://wordpress.org/plugins/give) is the leading Donation Plugin for WordPress. Within one year Give received [over 100 5-star reviews](https://wordpress.org/support/view/plugin-reviews/give), and 10,000 active installs. Give is actively developed and supported. Find out more at [givewp.com](https://givewp.com). Read about our [Give Stories here](https://givewp.com/category/give-stories).
