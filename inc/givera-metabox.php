@@ -2,8 +2,8 @@
 /**
  * The GIVERA Metabox 
  *
- * @copyright   Copyright (c) 2015, WordImpress
- * @license     http://opensource.org/licenses/gpl-2.0.php GNU Public License
+ * @copyright   Copyright (c) 2016, Matt Cromwell
+ * @license     http://www.gnu.org/licenses/gpl-3.0.en.html
  * @since       1.0
  */
 

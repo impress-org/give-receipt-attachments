@@ -18,6 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @param $payment_id
  */
+
 function givera_attachment_tag( $payment_id ) {
 
 	give_add_email_tag( 'attachmenturl', 'This outputs the url of the attachment for the relevant form', 'givera_attachment_data' );
@@ -38,7 +39,7 @@ function givera_attachment_paymentmeta($payment_meta) {
 add_filter( 'give_payment_meta', 'givera_attachment_paymentmeta' );
 
 
-// Adds info to the email tag {downloadurl}
+// Adds info to the email tag {attachmenturl}
 function givera_attachment_data( $payment_id ) {
 
 	$paymentmeta = give_get_payment_meta( $payment_id );
@@ -78,25 +79,25 @@ function givera_attachment_data( $payment_id ) {
 
 add_action('give_payment_receipt_before_table', 'add_attachment_to_donation_receipt');
 
-function add_attachment_to_donation_receipt($payment) {
+function add_attachment_to_donation_receipt( $payment ) {
 	
 	$paymentmeta = give_get_payment_meta( $payment->ID );
 	$formid = $paymentmeta['form_id'];
 	
-	$attachurl = get_post_meta($formid, '_givera_attachment_url', true);
-	$attachtext = get_post_meta($formid, '_givera_link_text', true);
-	$getminimum = get_post_meta($formid, '_givera_min_amount', true);
-	$confirmationtitle = get_post_meta($formid, '_givera_confirmation_title', true);
+	$attachurl = get_post_meta( $formid, '_givera_attachment_url', true );
+	$attachtext = get_post_meta( $formid, '_givera_link_text', true );
+	$getminimum = get_post_meta( $formid, '_givera_min_amount', true );
+	$confirmationtitle = get_post_meta( $formid, '_givera_confirmation_title', true );
 	
-	if (empty($getminimum)) {
+	if ( empty($getminimum) ) {
 		$minimum = '0';
 	} else {
 		$minimum = $getminimum;
 	}
 	
 	//Normalize these amounts for proper comparison
-	$paymentamount = html_entity_decode(give_payment_amount( $payment->ID ));
-	$donation = preg_replace("/([^0-9\\.])/i", "", $paymentamount);
+	$paymentamount = html_entity_decode( give_payment_amount( $payment->ID ) );
+	$donation = preg_replace( "/([^0-9\\.])/i", "", $paymentamount );
 	
 	// Use for debugging the output
 	// echo '<h4>Payment =</h4>';
@@ -111,7 +112,7 @@ function add_attachment_to_donation_receipt($payment) {
 	// Only show the Attachment text and links if
 	// 1. There is a attachment url attached to this donation
 	// 2. If there's a minimum amount, the donation is equal to or more than that minimum
-	if ($attachurl && ( $donation >= $minimum ) ) { ?>
+	if ( $attachurl && ( $donation >= $minimum ) ) { ?>
 		
 		<div class="donation-attachment">
 			<h3><?php echo $confirmationtitle; ?></h3>

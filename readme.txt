@@ -20,7 +20,7 @@ This has many potential use-cases. Here's a few ideas:
 * Give a MP3 song as thanks to your donors
 * Give a ZIP file (like a free WordPress plugin) to your donors
 
-## Features
+**FEATURES**
 
 * Choose custom title text for the confirmation page
 * Choose custom link text for the download
@@ -29,11 +29,18 @@ This has many potential use-cases. Here's a few ideas:
 * Add the link to your Admin notification email and/or the Donor notification email via a custom Email tag.
 * Forms that don't have uploads are not affected in any way.
 
-## About Matt Cromwell
+**BASIC USAGE**
 
-I'm Head of Support and Community Outreach at [WordImpress](https://wordimpress.com). Our most popular plugin is [Give](https://wordpress.org/plugins/give), the leading donation plugin for WordPress. I build custom WordPress plugins and themes and blog frequently at [mattcromwell.com](https://www.mattcromwell.com) on WordPress, Religion and Politics, and Family life. 
+At the bottom of each Give Form edit screen you'll find the Give Receipt Attachments settings area. You configure that per form. This includes the minimum donation amount necessary for the attachment to be available (optionally).
 
-If you are enjoying [Give Receipt Attachments](https://www.mattcromwell.com/products/give-receipt-attachments) please consider giving a donation to support my free plugin and theme development. All donations provided through my website go to help San Diego nonprofit organizations with their hosting and web maintenance.
+If you upload a file and configure the settings there, the attachment title and link will appear automatically before the Donation Receipt table on your Donation Confirmation page.
+
+In order to have the attachment link appear in your donation receipt emails, go to "Donations > Settings" then the Emails tab. In the Donation Receipt email field add {attachmenturl} anywhere you like. Below that field you'll see a full list of all the available email tags.
+
+**ABOUT MATT CROMWELL**
+> I'm Head of Support and Community Outreach at [WordImpress](https://wordimpress.com). Our most popular plugin is [Give](https://wordpress.org/plugins/give), the leading donation plugin for WordPress. I build custom WordPress plugins and themes and blog frequently at [mattcromwell.com](https://www.mattcromwell.com) on WordPress, Religion and Politics, and Family life. 
+> 
+> If you are enjoying Give Receipt Attachments please consider [giving a donation](https://www.mattcromwell.com/products/give-receipt-attachments) to support my free plugin and theme development. All donations provided through my website go to [help San Diego nonprofit organizations with their hosting and web maintenance](https://www.mattcromwell.com/help-me-help-others/). 
 
 == Installation ==
 
@@ -42,7 +49,6 @@ If you are enjoying [Give Receipt Attachments](https://www.mattcromwell.com/prod
 * WordPress 4.0 or greater
 * PHP version 5.3 or greater
 * MySQL version 5.0.15 or greater
-* Some payment gateways require fsockopen support (for IPN access)
 
 = Automatic installation =
 
@@ -63,64 +69,35 @@ Automatic updates should work like a charm; as always though, ensure you backup 
 
 = What file types are supported? =
 
-An answer to that question.
+Give Receipt Attachments uses the Media Library to upload your attachments. This means that you can use any file type that the Media Library supports. [See a full list here](https://codex.wordpress.org/Uploading_Files).
 
-= What about foo bar? =
+= Where can I submit Support Questions? =
 
-Answer to foo bar dilemma.
+I'll answer all inquiries [here](https://wordpress.org/support/plugin/give-receipt-attachments).
+
+= I have a feature request, or would like to contribute to this plugin. Where can I do that? =
+
+Give Receipt Attachments is hosted publicly on Github. I'd love your feedback and suggestions [there](https://github.com/mathetos/give-receipt-attachments/issues).
+
+= I really love this Add-on. Can I donate a bit to you for making it? =
+
+I really appreciate that! You can donate here.
+
+Please know that all donations generated through my website go to support my family and local nonprofits in San Diego. [Read more about that here](https://www.mattcromwell.com/help-me-help-others/).
 
 == Screenshots ==
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets 
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png` 
-(or jpg, jpeg, gif).
-2. This is the second screen shot
+1. The Attachment Title and Link displayed on the Give Donation Confirmation page.
+2. The Attachment link displayed inside the Give Donation Receipt Email.
+3. Adding the Attachment link to your donation receipt email requires adding the {attachmenturl} email tag.
+4. The settings for Give Receipt Attachments that are displayed at the bottom of each Give form edit screen.
 
 == Changelog ==
 
 = 1.0 =
-* A change since the previous version.
-* Another change.
-
-= 0.5 =
-* List versions from most recent at top to oldest at bottom.
+* Initial release
 
 == Upgrade Notice ==
 
 = 1.0 =
-Upgrade notices describe the reason a user should upgrade.  No more than 300 characters.
-
-= 0.5 =
-This version fixes a security related bug.  Upgrade immediately.
-
-== Arbitrary section ==
-
-You may provide arbitrary sections, in the same format as the ones above.  This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation."  Arbitrary sections will be shown below the built-in sections outlined above.
-
-== A brief Markdown Example ==
-
-Ordered list:
-
-1. Some feature
-1. Another feature
-1. Something else about the plugin
-
-Unordered list:
-
-* something
-* something else
-* third thing
-
-Here's a link to [WordPress](http://wordpress.org/ "Your favorite software") and one to [Markdown's Syntax Documentation][markdown syntax].
-Titles are optional, naturally.
-
-[markdown syntax]: http://daringfireball.net/projects/markdown/syntax
-            "Markdown is what the parser uses to process much of the readme file"
-
-Markdown uses email style notation for blockquotes and I've been told:
-> Asterisks for *emphasis*. Double it up  for **strong**.
-
-`<?php code(); // goes in backticks ?>`
+This is the initial release. Thanks for installing!
