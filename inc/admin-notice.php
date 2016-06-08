@@ -117,7 +117,7 @@ function givera_review_notice() {
                     //echo '<p>Installed = ' . $installed . '</p>';
                 ?>
 
-                <p class="review"><span class="dashicons dashicons-heart"></span><?php echo _e( 'Are you enjoying <strong>Receipt Attachments for Give</strong>? Would you consider either a <a href="https://www.mattcromwell.com/products/give-receipt-attachments" target="_blank">small donation</a> or a <a href="https://wordpress.org/support/view/plugin-reviews/give-receipt-attachments" target="_blank">kind review to help continue development of this plugin?', 'givera' ); ?><a href="<?php echo admin_url( $nag_admin_dismiss_url ); ?>" class="dismiss"><span class="dashicons dashicons-dismiss"></span></a>
+                <p class="review"><span class="dashicons dashicons-heart"></span><?php echo wp_kses( sprintf( __( 'Are you enjoying <strong>Receipt Attachments for Give</strong>? Would you consider either a <a href="%1$s" target="_blank">small donation</a> or a <a href="%2$s" target="_blank">kind review to help continue development of this plugin?', 'givera' ), esc_url( 'https://www.mattcromwell.com/products/give-receipt-attachments' ), esc_url( 'https://wordpress.org/support/view/plugin-reviews/give-receipt-attachments' ) ), array( 'strong' => array(), 'a' => array( 'href' => array(), 'target' => array() ) ) ); ?><a href="<?php echo admin_url( $nag_admin_dismiss_url ); ?>" class="dismiss"><span class="dashicons dashicons-dismiss"></span></a>
                 </p>
 
             </div>
