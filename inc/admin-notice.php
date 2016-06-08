@@ -64,12 +64,10 @@ function givera_review_notice() {
     global $current_user ;
     $user_id = $current_user->ID;
 
-    $today = mktime( 0, 0, 0, date("m")  , date("d"), date("Y") );
+    $today     = mktime( 0, 0, 0, date( "m" ), date( "d" ), date( "Y" ) );
+    $installed = get_option( 'givera_activation_date', false );
 
-    if ( get_option( 'givera_activation_date') ) {
-
-        $installed = get_option( 'givera_activation_date', false );
-    } else {
+    if ( false === $installed ) {
         $installed = 999999999999999999999;
     }
     
