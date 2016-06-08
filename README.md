@@ -1,7 +1,7 @@
-# GIVE Receipt Attachments
+# GIVE RECEIPT ATTACHMENTS -- A Give Add-on
 A [Give](https://givewp.com) Addon which allows you to add a file to any Give donation form and have it appear for your donors to download via the donation confirmation page and/or email donation receipt.
 
-## Features
+## FEATURES
 
 * Choose custom title text for the confirmation page
 * Choose custom link text for the attachment
@@ -18,13 +18,7 @@ If you upload a file and configure the settings there, the attachment title and 
 
 In order to have the attachment link appear in your donation receipt emails, go to "Donations > Settings" then the Emails tab. In the Donation Receipt email field add `{attachmenturl}` anywhere you like. Below that field you'll see a full list of all the available email tags.
 
-## ABOUT MATT CROMWELL
-
-I'm Head of Support and Community Outreach at [WordImpress](https://wordimpress.com/). Our most popular plugin is [Give](https://wordpress.org/plugins/give), the leading donation plugin for WordPress. I build custom WordPress plugins and themes and blog frequently at [mattcromwell.com](https://www.mattcromwell.com/) on WordPress, Religion and Politics, and Family life.
-
-If you are enjoying [Give Receipt Attachments](https://www.mattcromwell.com/products/give-receipt-attachments) please consider giving a donation to support my free plugin and theme development. All donations provided through my website go to [help San Diego nonprofit organizations with their hosting and web maintenance](https://www.mattcromwell.com/help-me-help-others/).
-
-## Screenshots
+## SCREENSHOTS
 
 *Configure your Gift via the "Give a Gift for Donating" metabox on your Give form:*
 
@@ -42,9 +36,11 @@ If you are enjoying [Give Receipt Attachments](https://www.mattcromwell.com/prod
 
 ![GIVE-RA on Email Receipt](assets/ggfd-email-receipt.jpg)
 
-## About Matt Cromwell
+## ABOUT MATT CROMWELL
 
-I'm Head of Support and Community Outreach at [WordImpress](https://wordimpress.com). I build custom plugins and themes and blog regularly at [mattcromwell.com](https://www.mattcromwell.com).
+I'm Head of Support and Community Outreach at [WordImpress](https://wordimpress.com/). Our most popular plugin is [Give](https://wordpress.org/plugins/give), the leading donation plugin for WordPress. I build custom WordPress plugins and themes and blog frequently at [mattcromwell.com](https://www.mattcromwell.com/) on WordPress, Religion and Politics, and Family life.
 
-## About Give
+If you are enjoying [Give Receipt Attachments](https://www.mattcromwell.com/products/give-receipt-attachments) please consider giving a donation to support my free plugin and theme development. All donations provided through my website go to [help San Diego nonprofit organizations with their hosting and web maintenance](https://www.mattcromwell.com/help-me-help-others/).
+
+## ABOUT GIVE
 Give is the leading Donation Plugin for WordPress. Within one year Give received over 100 5-star reviews, and 10,000 active installs. Give is actively developed and supported. Find out more at [givewp.com](https://givewp.com). Read about our [Give Stories here](https://givewp.com/category/give-stories).
