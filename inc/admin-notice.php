@@ -76,8 +76,9 @@ function givera_review_notice() {
             // If the user hasn't already dismissed our alert, 
             // Output the activation banner
             $nag_admin_dismiss_url = 'plugins.php?givera_review_dismiss=0';
+            $user_meta             = get_user_meta( $user_id, 'givera_review_dismiss' );
 
-            if (!get_user_meta($user_id, 'givera_review_dismiss')) {
+            if ( empty( $user_meta ) ) {
             
             ?>
             <div class="notice notice-success">
