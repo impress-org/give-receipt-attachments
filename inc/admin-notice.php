@@ -19,7 +19,6 @@ function givera_activation_admin_notice() {
 	
     //Get current user and current page to add the notice to
 	global $current_user, $pagenow;
-	$user_id = $current_user->ID;
 	
 	//Make sure we're on the plugins page.
 	if ( $pagenow == 'plugins.php' ) {
