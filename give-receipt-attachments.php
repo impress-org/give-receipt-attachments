@@ -3,7 +3,7 @@
  * Plugin Name: 	GIVE Receipt Attachments 
  * Plugin URI: 		https://www.mattcromwell.com/products/give-receipt-attachments
  * Description: 	Add downloadable files to your Give Email Receipts and/or Confirmation Page.
- * Version: 		1.0
+ * Version: 		1.1
  * Author: 			Matt Cromwell
  * Author URI: 		https://www.mattcromwell.com
  * License:      	GNU General Public License v3 or later
@@ -15,6 +15,16 @@
 
 // Defines Plugin directory for easy reference
 define( 'GIVERA_DIR', dirname( __FILE__ ) );
+
+// Defines Addon Basename
+if ( ! defined( 'GIVERA_BASENAME' ) ) {
+    define( 'GIVERA_BASENAME', plugin_basename( __FILE__ ) );
+}
+
+// Defins Addon Version number for easy reference
+if ( ! defined( 'GIVERA_VERSION' ) ) {
+    define( 'GIVERA_VERSION', '1.1' );
+}
 
 // Checks if GIVE is active. 
 // If not, it bails with an Admin notice as to why. 
@@ -44,9 +54,13 @@ function givera_plugin_init() {
     } else {
 		
 		// Include/Execute necessary files
-		include_once( GIVERA_DIR . '/inc/givera-metabox.php' );
+        if ( version_compare( GIVE_VERSION, '1.8', '=>' ) ) {
+            include_once( GIVERA_DIR . '/inc/givera-metabox.php' );
+        } else {
+            include_once( GIVERA_DIR . '/inc/givera-metabox-1-8.php' );
+        }
 		include_once( GIVERA_DIR . '/inc/givera-custom-form-fields.php' );
-		include_once( GIVERA_DIR . '/inc/admin-notice.php' );
+		include_once( GIVERA_DIR . '/inc/plugin-activation.php' );
 
 	 }
 }
