@@ -15,6 +15,7 @@
 
 // Defines Plugin directory for easy reference
 define( 'GIVERA_DIR', dirname( __FILE__ ) );
+define( 'GIVERA_URL', plugin_dir_url( __FILE__ ) );
 
 // Defines Addon Basename
 if ( ! defined( 'GIVERA_BASENAME' ) ) {
@@ -54,11 +55,12 @@ function givera_plugin_init() {
     } else {
 		
 		// Include/Execute necessary files
-        if ( version_compare( GIVE_VERSION, '1.8', '=>' ) ) {
+        if ( version_compare( GIVE_VERSION, '1.8') < 0 ) {
             include_once( GIVERA_DIR . '/inc/givera-metabox.php' );
         } else {
             include_once( GIVERA_DIR . '/inc/givera-metabox-1-8.php' );
         }
+
 		include_once( GIVERA_DIR . '/inc/givera-custom-form-fields.php' );
 		include_once( GIVERA_DIR . '/inc/plugin-activation.php' );
 
