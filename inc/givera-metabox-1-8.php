@@ -49,7 +49,8 @@ class GiveRA_Form_Data {
                 'id'         => $prefix . 'min_amount',
                 'name'       => __( 'Minimum Donation?', 'givera' ),
                 'desc'       => __( 'If you want the Attachment available only if the donor donates a minimum amount, enter that here. Otherwise leave blank.', 'givera' ),
-                'type'       => 'text-medium',
+                'type'       => 'text_small',
+                'data_type'  => 'price',
             ),
             array(
                 'id'         => $prefix . 'confirmation_title',
@@ -72,9 +73,10 @@ class GiveRA_Form_Data {
         $field['value'] = give_get_field_value( $field, $thepostid );
 
         ?>
+
             <p id="givera-attachment-url" class="give-field-wrap <?php echo esc_attr( $field['id'] ) . '_field'; ?>">
                 <label for="<?php echo give_get_field_name( $field ); ?>"><?php echo wp_kses_post( $field['name'] ); ?></label>
-                <input name="<?php echo give_get_field_name( $field ); ?>" id="<?php echo esc_attr( $field['id'] ); ?>" value="<?php echo $field['value']; ?>" class="givera-attachment-url">
+                <input type="text" name="<?php echo give_get_field_name( $field ); ?>" id="<?php echo esc_attr( $field['id'] ); ?>" value="<?php echo $field['value']; ?>" class="give-field give-text givera-attachment-url"> <span class="dashicons dashicons-no remove-attachment"></span><br />
                 <input id="givera-attachment-button" type="button" class="button" value="Upload Attachment" />
             </p>
 
@@ -88,7 +90,8 @@ class GiveRA_Form_Data {
 
         if ($hook == 'post-new.php' || $hook == 'post.php') {
             if ('give_forms' === $post->post_type) {
-                wp_enqueue_style( 'givera-admin', GIVERA_URL . '/assets/givera-admin.css', 'give-admin', '1.1', 'all' );
+                wp_enqueue_style( 'givera-admin-css', GIVERA_URL . '/assets/givera-admin.css', 'give-admin', '1.1', 'all' );
+                wp_enqueue_script( 'givera-admin-js', GIVERA_URL . '/assets/givera-admin.js', array('jquery','give-admin-scripts'), '1.1' );
             }
         }
     }
