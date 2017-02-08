@@ -76,3 +76,64 @@
 label[for="_givera_confirmation_title"] {
     max-width: 140px;
 }
+#give-metabox-form-data .give_options_panel .give-field-wrap p.toggle-label {
+    margin: 0 0 0 -150px;
+    width: 140px;
+    float: left;
+}
+
+/* The switch - the box around the slider */
+#give-metabox-form-data .give_options_panel .give-field-wrap > label.toggler-wrap {
+    position: relative;
+    display: inline-block;
+    width: 53px;
+    height: 27px;
+    float: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Hide default HTML checkbox */
+.toggler-wrap input {display:none;}
+
+/* The slider */
+.toggler {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 31px;
+}
+
+.toggler:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .toggler {
+    background-color: #0073AA;
+}
+
+input:focus + .toggler {
+    box-shadow: 0 0 1px #0073AA;
+}
+
+input:checked + .toggler:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+

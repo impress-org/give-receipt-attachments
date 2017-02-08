@@ -51,6 +51,10 @@ class GiveRA_Form_Data {
                 'desc'       => __( 'If you want the Attachment available only if the donor donates a minimum amount, enter that here. Otherwise leave blank.', 'givera' ),
                 'type'       => 'text_small',
                 'data_type'  => 'price',
+                'attributes'  => array(
+                    'placeholder' => give_format_decimal( '1.00' ),
+                    'class'       => 'give-money-field',
+                ),
             ),
             array(
                 'id'         => $prefix . 'confirmation_title',
@@ -63,8 +67,44 @@ class GiveRA_Form_Data {
                 'name'       => __( 'Attachment Link Text', 'givera' ),
                 'desc'       => __( 'This is what the link in your email will say', 'givera' ),
                 'type'       => 'text-medium',
-            )
+            ),
+            array(
+                'name' => esc_html__( 'Show Download on Receipt Page?', 'give' ),
+                'desc'       => __( 'If this is disabled, then make sure the <code>{attachmenturl}</code> email tag is in your donation email receipts, otherwise there will be nowhere for your donors to access their download.', 'givera' ),
+                'id'   => $prefix . 'enable_receipt',
+                'type' => 'checkbox',
+                'callback' => array( $this, 'give_toggle_switch' ),
+            ),
         );
+    }
+
+    function give_toggle_switch($field) {
+        global $thepostid, $post;
+        $thepostid              = empty( $thepostid ) ? $post->ID : $thepostid;
+        $field['style']         = isset( $field['style'] ) ? $field['style'] : '';
+        $field['wrapper_class'] = isset( $field['wrapper_class'] ) ? $field['wrapper_class'] : '';
+        $field['value']         = give_get_field_value( $field, $thepostid );
+        $field['cbvalue']       = isset( $field['cbvalue'] ) ? $field['cbvalue'] : 'on';
+        $field['name']          = isset( $field['name'] ) ? $field['name'] : $field['id'];
+        ?>
+        <div class="give-field-wrap <?php echo esc_attr( $field['id'] ); ?>_field <?php echo esc_attr( $field['wrapper_class'] ); ?>">
+            <p class="toggle-label"><?php echo wp_kses_post( $field['name'] ); ?></p>
+            <label for="<?php echo give_get_field_name( $field ); ?>" class="toggler-wrap">
+                <input
+                    type="checkbox"
+                    style="<?php echo esc_attr( $field['style'] ); ?>"
+                    name="<?php echo give_get_field_name( $field ); ?>"
+                    id="<?php echo esc_attr( $field['id'] ); ?>"
+                    value="<?php echo esc_attr( $field['cbvalue'] ); ?>"
+                    <?php echo checked( $field['value'], $field['cbvalue'], false ); ?>
+                    <?php echo give_get_custom_attributes( $field ); ?>
+                />
+                <div class="toggler"></div>
+            </label>
+
+        <?php
+        echo give_get_field_description( $field );
+        echo '</div>';
     }
 
     function give_upload_field($field) {
@@ -90,7 +130,7 @@ class GiveRA_Form_Data {
 
         if ($hook == 'post-new.php' || $hook == 'post.php') {
             if ('give_forms' === $post->post_type) {
-                wp_enqueue_style( 'givera-admin-css', GIVERA_URL . '/assets/givera-admin.css', 'give-admin', '1.1', 'all' );
+                wp_enqueue_style( 'givera-admin-css', GIVERA_URL . '/assets/givera-admin.css', array('give-admin'), '1.1', 'all' );
                 wp_enqueue_script( 'givera-admin-js', GIVERA_URL . '/assets/givera-admin.js', array('jquery','give-admin-scripts'), '1.1' );
             }
         }

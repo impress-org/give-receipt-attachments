@@ -88,6 +88,8 @@ function add_attachment_to_donation_receipt( $payment ) {
 	$attachtext = get_post_meta( $formid, '_givera_link_text', true );
 	$getminimum = get_post_meta( $formid, '_givera_min_amount', true );
 	$confirmationtitle = get_post_meta( $formid, '_givera_confirmation_title', true );
+	$enabledownload = get_post_meta( $formid, '_givera_enable_receipt', true );
+
 	
 	if ( empty($getminimum) ) {
 		$minimum = '0';
@@ -112,7 +114,7 @@ function add_attachment_to_donation_receipt( $payment ) {
 	// Only show the Attachment text and links if
 	// 1. There is a attachment url attached to this donation
 	// 2. If there's a minimum amount, the donation is equal to or more than that minimum
-	if ( $attachurl && ( $donation >= $minimum ) ) { ?>
+	if ( $attachurl && ( $donation >= $minimum ) && ( $enabledownload == 'on' ) ) { ?>
 		
 		<div class="donation-attachment">
 			<h3><?php echo $confirmationtitle; ?></h3>

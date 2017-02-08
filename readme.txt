@@ -81,7 +81,7 @@ Give Receipt Attachments is hosted publicly on Github. I'd love your feedback an
 
 = I really love this Add-on. Can I donate a bit to you for making it? =
 
-I really appreciate that! You can donate here.
+I really appreciate that! [You can donate here](https://www.mattcromwell.com/products/give-receipt-attachments/).
 
 Please know that all donations generated through my website go to support my family and local nonprofits in San Diego. [Read more about that here](https://www.mattcromwell.com/help-me-help-others/).
 
@@ -93,6 +93,11 @@ Please know that all donations generated through my website go to support my fam
 4. The settings for Give Receipt Attachments that are displayed at the bottom of each Give form edit screen.
 
 == Changelog ==
+
+= 1.1 =
+* Added compatibility with Give 1.8's new Metabox UI
+* Added a setting to toggle showing the download on the donation confirmation page or not.
+* Added proper textdomain loader and POT, PO, and MO files.
 
 = 1.0 =
 * Initial release
