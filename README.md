@@ -1,5 +1,5 @@
 # GIVE RECEIPT ATTACHMENTS -- A Give Add-on
-A [Give](https://givewp.com) Addon which allows you to add a file to any Give donation form and have it appear for your donors to download via the donation confirmation page and/or email donation receipt.
+A [Give](https://givewp.com) Add-on which allows you to add a file to any Give donation form and have it appear for your donors to download via the donation confirmation page and/or email donation receipt.
 
 ## FEATURES
 

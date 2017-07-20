@@ -1,0 +1,166 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: GIVE Receipt Attachments\n"
+"POT-Creation-Date: 2017-07-19 21:45-0700\n"
+"PO-Revision-Date: 2017-02-07 22:27-0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: give-receipt-attachments.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: give-receipt-attachments.php:76
+#, php-format
+msgid ""
+"<strong>Activation Error:</strong> You must have the <a href=\"%s\" target="
+"\"_blank\">Give</a> core plugin installed and activated for the Receipt "
+"Attachments Add-on to activate."
+msgstr ""
+
+#: give-receipt-attachments.php:88
+#, php-format
+msgid ""
+"<strong>Activation Error:</strong> You must have <a href=\"%s\" target="
+"\"_blank\">Give</a> version %s+ for the Receipt Attachment add-on to "
+"activate."
+msgstr ""
+
+#: inc/admin-notice-markup.php:16
+#, php-format
+msgid "Thank you for installing the %1$s%2$s%3$s Add-on for Give!"
+msgstr ""
+
+#: inc/admin-notice-markup.php:29
+msgid "Get Support"
+msgstr ""
+
+#: inc/admin-notice-markup.php:33
+msgid "Support this Plugin"
+msgstr ""
+
+#: inc/admin-notice-markup.php:37
+msgid "Leave a Review"
+msgstr ""
+
+#: inc/admin-notice.php:122 inc/plugin-activation.php:217
+msgid ""
+"Are you enjoying <strong>Receipt Attachments for Give</strong>? Would you "
+"consider either a <a href=\"https://www.mattcromwell.com/products/give-"
+"receipt-attachments\" target=\"_blank\">small donation</a> or a <a href="
+"\"https://wordpress.org/support/view/plugin-reviews/give-receipt-attachments"
+"\" target=\"_blank\">kind review to help continue development of this plugin?"
+msgstr ""
+
+#: inc/givera-metabox-1-8.php:28
+msgid "Receipt Attachments"
+msgstr ""
+
+#: inc/givera-metabox-1-8.php:44
+msgid "Attachment Upload"
+msgstr ""
+
+#: inc/givera-metabox-1-8.php:46
+msgid "Upload your attachment via the WordPress Media Library."
+msgstr ""
+
+#: inc/givera-metabox-1-8.php:51 inc/givera-metabox.php:45
+msgid "Minimum Donation?"
+msgstr ""
+
+#: inc/givera-metabox-1-8.php:52 inc/givera-metabox.php:46
+msgid ""
+"If you want the Attachment available only if the donor donates a minimum "
+"amount, enter that here. Otherwise leave blank."
+msgstr ""
+
+#: inc/givera-metabox-1-8.php:62 inc/givera-metabox.php:51
+msgid "Donation Confirmation Title"
+msgstr ""
+
+#: inc/givera-metabox-1-8.php:63 inc/givera-metabox.php:52
+msgid ""
+"This will appear on the Donation Confirmation page above your attachment "
+"download link."
+msgstr ""
+
+#: inc/givera-metabox-1-8.php:68 inc/givera-metabox.php:57
+msgid "Attachment Link Text"
+msgstr ""
+
+#: inc/givera-metabox-1-8.php:69 inc/givera-metabox.php:58
+msgid "This is what the link in your email will say"
+msgstr ""
+
+#: inc/givera-metabox-1-8.php:73
+msgid "Show Download on Receipt Page?"
+msgstr ""
+
+#: inc/givera-metabox-1-8.php:74
+msgid ""
+"If this is disabled, then make sure the <code>{attachmenturl}</code> email "
+"tag is in your donation email receipts, otherwise there will be nowhere for "
+"your donors to access their download."
+msgstr ""
+
+#: inc/givera-metabox.php:30
+msgid "Give Receipt Attachments"
+msgstr ""
+
+#: inc/givera-metabox.php:36
+msgid "Upload"
+msgstr ""
+
+#: inc/plugin-activation.php:56
+msgid "Boilerplate"
+msgstr ""
+
+#: inc/plugin-activation.php:78
+msgid ""
+"<strong>Activation Error:</strong> You must have the <a href=\"https://"
+"givewp.com/\" target=\"_blank\">Give</a> plugin installed and activated for "
+"the Give Receipt Attachments Add-on to activate."
+msgstr ""
+
+#: inc/plugin-activation.php:99
+msgid "Settings"
+msgstr ""
+
+#: inc/plugin-activation.php:132
+msgid "Documentation"
+msgstr ""
+
+#: inc/plugin-activation.php:142
+msgid "Add-ons"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Give - Receipt Attachments"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://www.mattcromwell.com/products/give-receipt-attachments"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Add downloadable files to your Give Email Receipts and/or Confirmation Page."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Matt Cromwell"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.mattcromwell.com"
+msgstr ""

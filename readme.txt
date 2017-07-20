@@ -3,8 +3,8 @@ Contributors: webdevmattcrom
 Donate link: https://www.mattcromwell.com/products/give-receipt-attachments
 Tags: givewp, donation, donations, attachment, receipt
 Requires at least: 4.0
-Tested up to: 4.5.2
-Stable tag: 1.0
+Tested up to: 4.8
+Stable tag: 1.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -81,7 +81,7 @@ Give Receipt Attachments is hosted publicly on Github. I'd love your feedback an
 
 = I really love this Add-on. Can I donate a bit to you for making it? =
 
-I really appreciate that! You can donate here.
+I really appreciate that! [You can donate here](https://www.mattcromwell.com/products/give-receipt-attachments/).
 
 Please know that all donations generated through my website go to support my family and local nonprofits in San Diego. [Read more about that here](https://www.mattcromwell.com/help-me-help-others/).
 
@@ -94,10 +94,18 @@ Please know that all donations generated through my website go to support my fam
 
 == Changelog ==
 
+= 1.1 =
+* Added compatibility with Give 1.8's new Metabox UI
+* Added a setting to toggle showing the download on the donation confirmation page or not.
+* Added proper textdomain loader and POT, PO, and MO files.
+
 = 1.0 =
 * Initial release
 
 == Upgrade Notice ==
+
+= 1.1 =
+NOTE: This update requires Give version 1.8+
 
 = 1.0 =
 This is the initial release. Thanks for installing!
