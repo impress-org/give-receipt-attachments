@@ -20,7 +20,7 @@
     font-style: normal;
 }
 
-.give-metabox-tabs li._givera_givera_attachment_tab a:before {
+.give-metabox-tabs .givera_clip:before  {
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -34,9 +34,12 @@
 
     font-family: 'givera';
     content: "\e901";
-    font-size: 170%;
+    font-size: 1.25em;
     font-weight: 500;
     margin: 0 0 0 -4px;
+    position: relative;
+    top: 6px;
+
 }
 
 .givera-attachment-url {

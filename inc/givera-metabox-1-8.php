@@ -27,6 +27,7 @@ class GiveRA_Form_Data {
             'id' => $this->prefix . 'givera_attachment',
             'title' => esc_html__('Receipt Attachments', 'give'),
             'fields' => apply_filters('givera_metabox_fields', $this->get_fields( "{$this->prefix}givera_attachment" )),
+            'icon-html' => '<span class="givera_clip" style="font-size: 15px;text-align: left;line-height: 20px"></span>',
         ));
 
         return $settings;
@@ -130,8 +131,8 @@ class GiveRA_Form_Data {
 
         if ($hook == 'post-new.php' || $hook == 'post.php') {
             if ('give_forms' === $post->post_type) {
-                wp_enqueue_style( 'givera-admin-css', GIVERA_URL . '/assets/givera-admin.css', array('give-admin'), '1.1', 'all' );
-                wp_enqueue_script( 'givera-admin-js', GIVERA_URL . '/assets/givera-admin.js', array('jquery','give-admin-scripts'), '1.1' );
+                wp_enqueue_style( 'givera-admin-css', GIVERA_URL . 'assets/givera-admin.css', array('give-admin'), GIVERA_VERSION, 'all' );
+                wp_enqueue_script( 'givera-admin-js', GIVERA_URL . 'assets/givera-admin.js', array('jquery','give-admin-scripts'), GIVERA_VERSION );
             }
         }
     }

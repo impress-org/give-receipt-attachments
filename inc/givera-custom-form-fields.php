@@ -102,14 +102,14 @@ function add_attachment_to_donation_receipt( $payment ) {
 	$donation = preg_replace( "/([^0-9\\.])/i", "", $paymentamount );
 	
 	// Use for debugging the output
-	// echo '<h4>Payment =</h4>';
-	// var_dump($paymentamount);
-	// echo '<h4>Amount =</h4>';
-	// var_dump($donation);
-	// echo '<h4>Minimum =</h4>';
-	// var_dump($minimum);
-	// var_dump($attachurl);
-	// var_dump($attachtext);
+//	echo '<h4>Payment =</h4>';
+//	var_dump($paymentamount);
+//	echo '<h4>Amount =</h4>';
+//	var_dump($donation);
+//	echo '<h4>Minimum =</h4>';
+//	var_dump($minimum);
+//	var_dump($attachurl);
+//	var_dump($attachtext);
 	
 	// Only show the Attachment text and links if
 	// 1. There is a attachment url attached to this donation
