@@ -17,17 +17,11 @@ add_action( 'admin_notices', 'givera_review_notice' );
 
 function givera_activation_admin_notice() {
 	
-    //Get current user
-	global $current_user ;
-	$user_id = $current_user->ID;
-	
-	//Get the current page to add the notice to
-	global $pagenow;
+    //Get current user and current page to add the notice to
+	global $current_user, $pagenow;
 	
 	//Make sure we're on the plugins page.
 	if ( $pagenow == 'plugins.php' ) {
-		
-		global $current_user;
 
         // If they haven't already dismissed the notice, show it.
 		if ( !get_user_meta($current_user->ID, 'givera_nag_meta_key') ) {
@@ -64,12 +58,10 @@ function givera_review_notice() {
     global $current_user ;
     $user_id = $current_user->ID;
 
-    $today = mktime( 0, 0, 0, date("m")  , date("d"), date("Y") );
+    $today     = mktime( 0, 0, 0, date( "m" ), date( "d" ), date( "Y" ) );
+    $installed = get_option( 'givera_activation_date', false );
 
-    if ( get_option( 'givera_activation_date') ) {
-
-        $installed = get_option( 'givera_activation_date', false );
-    } else {
+    if ( false === $installed ) {
         $installed = 999999999999999999999;
     }
     
@@ -84,8 +76,9 @@ function givera_review_notice() {
             // If the user hasn't already dismissed our alert, 
             // Output the activation banner
             $nag_admin_dismiss_url = 'plugins.php?givera_review_dismiss=0';
+            $user_meta             = get_user_meta( $user_id, 'givera_review_dismiss' );
 
-            if (!get_user_meta($user_id, 'givera_review_dismiss')) {
+            if ( empty( $user_meta ) ) {
             
             ?>
             <div class="notice notice-success">
@@ -119,7 +112,7 @@ function givera_review_notice() {
                     //echo '<p>Installed = ' . $installed . '</p>';
                 ?>
 
-                <p class="review"><span class="dashicons dashicons-heart"></span><?php echo _e( 'Are you enjoying <strong>Receipt Attachments for Give</strong>? Would you consider either a <a href="https://www.mattcromwell.com/products/give-receipt-attachments" target="_blank">small donation</a> or a <a href="https://wordpress.org/support/view/plugin-reviews/give-receipt-attachments" target="_blank">kind review to help continue development of this plugin?', 'givera' ); ?><a href="<?php echo admin_url( $nag_admin_dismiss_url ); ?>" class="dismiss"><span class="dashicons dashicons-dismiss"></span></a>
+                <p class="review"><span class="dashicons dashicons-heart"></span><?php echo wp_kses( sprintf( __( 'Are you enjoying <strong>Receipt Attachments for Give</strong>? Would you consider either a <a href="%1$s" target="_blank">small donation</a> or a <a href="%2$s" target="_blank">kind review to help continue development of this plugin?', 'givera' ), esc_url( 'https://www.mattcromwell.com/products/give-receipt-attachments' ), esc_url( 'https://wordpress.org/support/view/plugin-reviews/give-receipt-attachments' ) ), array( 'strong' => array(), 'a' => array( 'href' => array(), 'target' => array() ) ) ); ?><a href="<?php echo admin_url( $nag_admin_dismiss_url ); ?>" class="dismiss"><span class="dashicons dashicons-dismiss"></span></a>
                 </p>
 
             </div>
