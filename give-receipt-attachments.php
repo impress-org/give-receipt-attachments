@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: 	Receipt Attachments for GiveWP
- * Plugin URI: 		https://www.mattcromwell.com/products/give-receipt-attachments
+ * Plugin URI: 		https://givewp.com/free-addon-receipt-attachments-for-givewp
  * Description: 	Add downloadable files to your Give Email Receipts and/or Confirmation Page.
  * Version: 		1.1
- * Author: 			Matt Cromwell
- * Author URI: 		https://www.mattcromwell.com
+ * Author: 			GiveWP
+ * Author URI: 		https://givewp.com/
  * License:      	GNU General Public License v3 or later
  * License URI:  	http://www.gnu.org/licenses/gpl-3.0.en.html
  * Text Domain:		givera
@@ -29,10 +29,10 @@ if ( ! defined( 'GIVERA_BASENAME' ) ) {
 
 // Defines the minimum Give version for GIVE_RA to run
 if ( ! defined( 'GIVERA_MIN_GIVE_VER' ) ) {
-	define( 'GIVERA_MIN_GIVE_VER', '1.8' );
+	define( 'GIVERA_MIN_GIVE_VER', '2.0' );
 }
 
-// Defins Addon Version number for easy reference
+// Defines Add-on Version number for easy reference
 if ( ! defined( 'GIVERA_VERSION' ) ) {
     define( 'GIVERA_VERSION', '1.1' );
 }
@@ -58,7 +58,7 @@ function givera_plugin_init() {
 
 	} else {
 
-		include_once( GIVERA_DIR . '/inc/givera-metabox-1-8.php' );
+		include_once( GIVERA_DIR . '/inc/givera-metabox.php' );
 		include_once( GIVERA_DIR . '/inc/givera-custom-form-fields.php' );
 		include_once( GIVERA_DIR . '/inc/plugin-activation.php' );
 		add_action( 'init', 'givera_load_plugin_textdomain' );
@@ -117,5 +117,5 @@ function givera_load_plugin_textdomain() {
     // wp-content/languages/plugin-name/plugin-name-de_DE.mo
     load_textdomain( $domain, trailingslashit( WP_LANG_DIR ) . $domain . '/' . $domain . '-' . $locale . '.mo' );
     // wp-content/plugins/plugin-name/languages/plugin-name-de_DE.mo
-    load_plugin_textdomain( $domain, FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
+	load_plugin_textdomain( $domain, FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
 }

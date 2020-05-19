@@ -58,7 +58,7 @@ function givera_attachment_data( $payment_id ) {
 	}
 	
 	//Normalize these amounts for proper comparison
-	$paymentamount = html_entity_decode(give_payment_amount( $payment_id ));
+	$paymentamount = html_entity_decode( give_donation_amount( $payment_id ) );
 	$donation = preg_replace("/([^0-9\\.])/i", "", $paymentamount);
 	
 	
@@ -98,18 +98,18 @@ function add_attachment_to_donation_receipt( $payment ) {
 	}
 	
 	//Normalize these amounts for proper comparison
-	$paymentamount = html_entity_decode( give_payment_amount( $payment->ID ) );
+	$paymentamount = html_entity_decode( give_donation_amount( $payment->ID ) );
 	$donation = preg_replace( "/([^0-9\\.])/i", "", $paymentamount );
 	
 	// Use for debugging the output
-//	echo '<h4>Payment =</h4>';
-//	var_dump($paymentamount);
-//	echo '<h4>Amount =</h4>';
-//	var_dump($donation);
-//	echo '<h4>Minimum =</h4>';
-//	var_dump($minimum);
-//	var_dump($attachurl);
-//	var_dump($attachtext);
+	//	echo '<h4>Payment =</h4>';
+	//	var_dump($paymentamount);
+	//	echo '<h4>Amount =</h4>';
+	//	var_dump($donation);
+	//	echo '<h4>Minimum =</h4>';
+	//	var_dump($minimum);
+	//	var_dump($attachurl);
+	//	var_dump($attachtext);
 	
 	// Only show the Attachment text and links if
 	// 1. There is a attachment url attached to this donation
