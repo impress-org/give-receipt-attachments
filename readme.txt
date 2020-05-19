@@ -1,18 +1,18 @@
-=== Give Receipt Attachments ===
-Contributors: webdevmattcrom
+=== Receipt Attachments for GiveWP ===
+Contributors: webdevmattcrom, givewp
 Donate link: https://www.mattcromwell.com/products/give-receipt-attachments
 Tags: givewp, donation, donations, attachment, receipt
 Requires at least: 4.0
-Tested up to: 4.8
+Tested up to: 5.4
 Stable tag: 1.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
-A Give Add-on which allows you to upload a file to use as an attachment on your donation email receipts and donation confirmation page.
+A [GiveWP](https://givewp.com/?utm_source=wordpress.org&utm_medium=referral&utm_campaign=Free_Addons&utm_content=ReceiptAttachments) add-on which allows you to upload a file to use as an attachment on your donation email receipts and donation confirmation page.
 
 == Description ==
 
-A [Give](https://givewp.com) Addon which allows you to add a file to any Give donation form and have it appear for your donors to download via the donation confirmation page and email confirmation.
+A [GiveWP](https://givewp.com/?utm_source=wordpress.org&utm_medium=referral&utm_campaign=Free_Addons&utm_content=ReceiptAttachments) add-on which allows you to add a file to any GiveWP donation form and have it appear for your donors to download via the donation confirmation page and email confirmation.
 
 This has many potential use-cases. Here's a few ideas:
 
@@ -31,16 +31,16 @@ This has many potential use-cases. Here's a few ideas:
 
 **BASIC USAGE**
 
-At the bottom of each Give Form edit screen you'll find the Give Receipt Attachments settings area. You configure that per form. This includes the minimum donation amount necessary for the attachment to be available (optionally).
+At the bottom of each GiveWP form edit screen you'll find the GiveWP Receipt Attachments settings area. You configure that per form. This includes the minimum donation amount necessary for the attachment to be available (optionally).
 
 If you upload a file and configure the settings there, the attachment title and link will appear automatically before the Donation Receipt table on your Donation Confirmation page.
 
 In order to have the attachment link appear in your donation receipt emails, go to "Donations > Settings" then the Emails tab. In the Donation Receipt email field add {attachmenturl} anywhere you like. Below that field you'll see a full list of all the available email tags.
 
 **ABOUT MATT CROMWELL**
-> I'm Head of Support and Community Outreach at [WordImpress](https://wordimpress.com). Our most popular plugin is [Give](https://wordpress.org/plugins/give), the leading donation plugin for WordPress. I build custom WordPress plugins and themes and blog frequently at [mattcromwell.com](https://www.mattcromwell.com) on WordPress, Religion and Politics, and Family life. 
+> I'm COO at [Impress.org](https://impress.org). Our most popular plugin is [GiveWP](https://go.givewp.com/download), the leading donation plugin for WordPress. I build custom WordPress plugins and themes and blog frequently at [mattcromwell.com](https://www.mattcromwell.com) on WordPress, Religion and Politics, and Family life. 
 > 
-> If you are enjoying Give Receipt Attachments please consider [giving a donation](https://www.mattcromwell.com/products/give-receipt-attachments) to support my free plugin and theme development. All donations provided through my website go to [help San Diego nonprofit organizations with their hosting and web maintenance](https://www.mattcromwell.com/help-me-help-others/). 
+> If you are enjoying Receipt Attachments for GiveWP please consider [giving a donation](https://www.mattcromwell.com/products/give-receipt-attachments) to support my free plugin and theme development. All donations provided through my website go to [help San Diego nonprofit organizations with their hosting and web maintenance](https://www.mattcromwell.com/help-me-help-others/). 
 
 == Installation ==
 
@@ -79,7 +79,7 @@ I'll answer all inquiries [here](https://wordpress.org/support/plugin/give-recei
 
 Give Receipt Attachments is hosted publicly on Github. I'd love your feedback and suggestions [there](https://github.com/mathetos/give-receipt-attachments/issues).
 
-= I really love this Add-on. Can I donate a bit to you for making it? =
+= I really love this add-on. Can I donate a bit to you for making it? =
 
 I really appreciate that! [You can donate here](https://www.mattcromwell.com/products/give-receipt-attachments/).
 
@@ -87,15 +87,15 @@ Please know that all donations generated through my website go to support my fam
 
 == Screenshots ==
 
-1. The Attachment Title and Link displayed on the Give Donation Confirmation page.
-2. The Attachment link displayed inside the Give Donation Receipt Email.
+1. The Attachment Title and Link displayed on the GiveWP Donation Confirmation page.
+2. The Attachment link displayed inside the GiveWP Donation Receipt Email.
 3. Adding the Attachment link to your donation receipt email requires adding the {attachmenturl} email tag.
-4. The settings for Give Receipt Attachments that are displayed at the bottom of each Give form edit screen.
+4. The settings for GiveWP Receipt Attachments that are displayed at the bottom of each GiveWP form edit screen.
 
 == Changelog ==
 
 = 1.1 =
-* Added compatibility with Give 1.8's new Metabox UI
+* Added compatibility with GiveWP 1.8's new Metabox UI
 * Added a setting to toggle showing the download on the donation confirmation page or not.
 * Added proper textdomain loader and POT, PO, and MO files.
 
@@ -105,7 +105,7 @@ Please know that all donations generated through my website go to support my fam
 == Upgrade Notice ==
 
 = 1.1 =
-NOTE: This update requires Give version 1.8+
+NOTE: This update requires GiveWP version 1.8+
 
 = 1.0 =
 This is the initial release. Thanks for installing!

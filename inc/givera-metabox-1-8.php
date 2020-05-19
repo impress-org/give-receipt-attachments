@@ -27,7 +27,7 @@ class GiveRA_Form_Data {
             'id' => $this->prefix . 'givera_attachment',
             'title' => esc_html__('Receipt Attachments', 'give'),
             'fields' => apply_filters('givera_metabox_fields', $this->get_fields( "{$this->prefix}givera_attachment" )),
-            'icon-html' => '<span class="givera_clip" style="font-size: 15px;text-align: left;line-height: 20px"></span>',
+            'icon-html' => file_get_contents(GIVERA_URL . 'assets/givera-icon.svg'),
         ));
 
         return $settings;
@@ -98,7 +98,7 @@ class GiveRA_Form_Data {
                     id="<?php echo esc_attr( $field['id'] ); ?>"
                     value="<?php echo esc_attr( $field['cbvalue'] ); ?>"
                     <?php echo checked( $field['value'], $field['cbvalue'], false ); ?>
-                    <?php echo give_get_custom_attributes( $field ); ?>
+                    <?php echo give_get_attribute_str( $field['attributes'] ); ?>
                 />
                 <div class="toggler"></div>
             </label>
@@ -131,7 +131,7 @@ class GiveRA_Form_Data {
 
         if ($hook == 'post-new.php' || $hook == 'post.php') {
             if ('give_forms' === $post->post_type) {
-                wp_enqueue_style( 'givera-admin-css', GIVERA_URL . 'assets/givera-admin.css', array('give-admin'), GIVERA_VERSION, 'all' );
+                wp_enqueue_style( 'givera-admin-css', GIVERA_URL . 'assets/givera-admin.css', array(), GIVERA_VERSION, 'all' );
                 wp_enqueue_script( 'givera-admin-js', GIVERA_URL . 'assets/givera-admin.js', array('jquery','give-admin-scripts'), GIVERA_VERSION );
             }
         }

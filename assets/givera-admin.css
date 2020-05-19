@@ -1,45 +1,10 @@
-@font-face {
-    font-family: 'givera';
-    src:  url('fonts/icomoon.eot?o2iupm');
-    src:  url('fonts/icomoon.eot?o2iupm#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?o2iupm') format('truetype'),
-    url('fonts/icomoon.woff?o2iupm') format('woff'),
-    url('fonts/icomoon.svg?o2iupm#icomoon') format('svg');
-    font-weight: normal;
-    font-style: normal;
+._givera_givera_attachment_tab a svg {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
 }
-
-@font-face {
-    font-family: 'icomoon';
-    src:  url('fonts/icomoon.eot?o2iupm');
-    src:  url('fonts/icomoon.eot?o2iupm#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?o2iupm') format('truetype'),
-    url('fonts/icomoon.woff?o2iupm') format('woff'),
-    url('fonts/icomoon.svg?o2iupm#icomoon') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-.give-metabox-tabs .givera_clip:before  {
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
-    font-family: 'givera';
-    content: "\e901";
-    font-size: 1.25em;
-    font-weight: 500;
-    margin: 0 0 0 -4px;
-    position: relative;
-    top: 6px;
-
+._givera_givera_attachment_tab a svg path {
+    fill:currentColor;
 }
 
 .givera-attachment-url {
@@ -74,6 +39,10 @@
 .dashicons.remove-attachment:active {
     top: 1px;
     left: 1px;
+}
+
+#givera-attachment-button {
+    margin-top: 5px;
 }
 
 label[for="_givera_confirmation_title"] {

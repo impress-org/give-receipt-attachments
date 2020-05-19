@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: 	Give - Receipt Attachments
+ * Plugin Name: 	Receipt Attachments for GiveWP
  * Plugin URI: 		https://www.mattcromwell.com/products/give-receipt-attachments
  * Description: 	Add downloadable files to your Give Email Receipts and/or Confirmation Page.
  * Version: 		1.1
