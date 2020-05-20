@@ -35,12 +35,10 @@ At the bottom of each GiveWP form edit screen you'll find the GiveWP Receipt Att
 
 If you upload a file and configure the settings there, the attachment title and link will appear automatically before the Donation Receipt table on your Donation Confirmation page.
 
-In order to have the attachment link appear in your donation receipt emails, go to "Donations > Settings" then the Emails tab. In the Donation Receipt email field add {attachmenturl} anywhere you like. Below that field you'll see a full list of all the available email tags.
+In order to have the attachment link appear in your donation receipt emails, go to "Donations > Settings" then the Emails tab. In the Donation Receipt email field add `{attachmenturl}` anywhere you like. Below that field you'll see a full list of all the available email tags.
 
 **ABOUT MATT CROMWELL**
 > I'm COO at [Impress.org](https://impress.org). Our most popular plugin is [GiveWP](https://go.givewp.com/download), the leading donation plugin for WordPress. I build custom WordPress plugins and themes and blog frequently at [mattcromwell.com](https://www.mattcromwell.com) on WordPress, Religion and Politics, and Family life. 
-> 
-> If you are enjoying Receipt Attachments for GiveWP please consider [giving a donation](https://www.mattcromwell.com/products/give-receipt-attachments) to support my free plugin and theme development. All donations provided through my website go to [help San Diego nonprofit organizations with their hosting and web maintenance](https://www.mattcromwell.com/help-me-help-others/). 
 
 == Installation ==
 

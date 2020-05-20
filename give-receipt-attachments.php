@@ -3,7 +3,7 @@
  * Plugin Name: 	Receipt Attachments for GiveWP
  * Plugin URI: 		https://givewp.com/free-addon-receipt-attachments-for-givewp
  * Description: 	Add downloadable files to your Give Email Receipts and/or Confirmation Page.
- * Version: 		1.1
+ * Version: 		1.1.1
  * Author: 			GiveWP
  * Author URI: 		https://givewp.com/
  * License:      	GNU General Public License v3 or later
@@ -34,7 +34,7 @@ if ( ! defined( 'GIVERA_MIN_GIVE_VER' ) ) {
 
 // Defines Add-on Version number for easy reference
 if ( ! defined( 'GIVERA_VERSION' ) ) {
-    define( 'GIVERA_VERSION', '1.1' );
+    define( 'GIVERA_VERSION', '1.1.1' );
 }
 
 // Checks if GIVE is active and minimum version.
