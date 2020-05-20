@@ -1,10 +1,10 @@
 === Receipt Attachments for GiveWP ===
 Contributors: webdevmattcrom, givewp
-Donate link: https://www.mattcromwell.com/products/give-receipt-attachments
+Donate link: https://givewp.com/free-addon-receipt-attachments-for-givewp
 Tags: givewp, donation, donations, attachment, receipt
 Requires at least: 4.0
 Tested up to: 5.4
-Stable tag: 1.1
+Stable tag: 1.1.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -93,6 +93,12 @@ Please know that all donations generated through my website go to support my fam
 4. The settings for GiveWP Receipt Attachments that are displayed at the bottom of each GiveWP form edit screen.
 
 == Changelog ==
+
+= 1.1.1 (May 2020) =
+* Improved Form Settings icon and general appearance
+* Code clean-up of admin assets
+* Removed deprecated core GiveWP functions from use 
+* Cleared out backwards compatibility files for VERY old versions of GiveWP
 
 = 1.1 =
 * Added compatibility with GiveWP 1.8's new Metabox UI
