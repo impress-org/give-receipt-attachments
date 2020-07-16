@@ -2,41 +2,13 @@
 /**
   * Version: 1.0
   * Author: Matt Cromwell
-  * Author URI: http://wordimpress.com/
+  * Author URI: https://www.mattcromwell.com/
   * License: GPLv2
   *
   **/
 
-/* Display a notice that can be dismissed 
- * Leverages WordPress's core function: admin_notices
- * See here: http://codex.wordpress.org/Plugin_API/Action_Reference/admin_notices
- */
-
-add_action( 'admin_notices', 'givera_activation_admin_notice' );
 add_action( 'admin_notices', 'givera_review_notice' );
 
-function givera_activation_admin_notice() {
-	
-    //Get current user
-	global $current_user ;
-	$user_id = $current_user->ID;
-	
-	//Get the current page to add the notice to
-	global $pagenow;
-	
-	//Make sure we're on the plugins page.
-	if ( $pagenow == 'plugins.php' ) {
-		
-		global $current_user;
-
-        // If they haven't already dismissed the notice, show it.
-		if ( !get_user_meta($current_user->ID, 'givera_nag_meta_key') ) {
-			
-			include ( GIVERA_DIR . '/inc/admin-notice-css.php' );
-            include ( GIVERA_DIR . '/inc/admin-notice-markup.php' );
-		}
-	}
-}
 
 /* This is the action that allows
  * the user to dismiss the banner
