@@ -4,7 +4,7 @@ Donate link: https://givewp.com/free-addon-receipt-attachments-for-givewp
 Tags: givewp, donation, donations, attachment, receipt
 Requires at least: 4.0
 Tested up to: 5.4
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -81,7 +81,7 @@ Give Receipt Attachments is hosted publicly on Github. I'd love your feedback an
 
 I really appreciate that! [You can donate here](https://www.mattcromwell.com/products/give-receipt-attachments/).
 
-Please know that all donations generated through my website go to support my family and local nonprofits in San Diego. [Read more about that here](https://www.mattcromwell.com/help-me-help-others/).
+Please know that all donations generated through my website go to support the work I do with local nonprofits in San Diego. [Read more about that here](https://www.mattcromwell.com/help-me-help-others/).
 
 == Screenshots ==
 
@@ -91,6 +91,9 @@ Please know that all donations generated through my website go to support my fam
 4. The settings for GiveWP Receipt Attachments that are displayed at the bottom of each GiveWP form edit screen.
 
 == Changelog ==
+
+= 1.1.2 (July 2020) = 
+* Hotfix to prevent the add-on from indicating it needs a license key.
 
 = 1.1.1 (May 2020) =
 * Improved Form Settings icon and general appearance
