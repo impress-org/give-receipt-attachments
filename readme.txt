@@ -16,7 +16,7 @@ A [GiveWP](https://givewp.com/?utm_source=wordpress.org&utm_medium=referral&utm_
 
 This has many potential use-cases. Here's a few ideas:
 
-* Provide a PDF Gift Certificate to those who donate over a certian amount
+* Provide a PDF Gift Certificate to those who donate over a certain amount
 * Give a MP3 song as thanks to your donors
 * Give a ZIP file (like a free WordPress plugin) to your donors
 
