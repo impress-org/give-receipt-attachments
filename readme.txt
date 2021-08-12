@@ -3,7 +3,7 @@ Contributors: webdevmattcrom, givewp
 Donate link: https://givewp.com/free-addon-receipt-attachments-for-givewp
 Tags: givewp, donation, donations, attachment, receipt
 Requires at least: 4.0
-Tested up to: 5.4
+Tested up to: 5.8
 Stable tag: 1.1.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
@@ -37,8 +37,10 @@ If you upload a file and configure the settings there, the attachment title and 
 
 In order to have the attachment link appear in your donation receipt emails, go to "Donations > Settings" then the Emails tab. In the Donation Receipt email field add `{attachmenturl}` anywhere you like. Below that field you'll see a full list of all the available email tags.
 
+Be sure to check out our [online documentation](https://givewp.com/documentation/add-ons/receipt-attachments-for-givewp/?utm_source=wordpress.org&utm_medium=referral&utm_campaign=Free_Addons&utm_content=ReceiptAttachments) for more info on how to use this free add-on. 
+
 **ABOUT MATT CROMWELL**
-> I'm COO at [Impress.org](https://impress.org). Our most popular plugin is [GiveWP](https://go.givewp.com/download), the leading donation plugin for WordPress. I build custom WordPress plugins and themes and blog frequently at [mattcromwell.com](https://www.mattcromwell.com) on WordPress, Religion and Politics, and Family life. 
+> I'm General Operations Manager at [GiveWP](https://givewp.com). I build custom WordPress plugins and themes and blog frequently at [mattcromwell.com](https://www.mattcromwell.com) on WordPress, Religion and Politics, and Family life. 
 
 == Installation ==
 
