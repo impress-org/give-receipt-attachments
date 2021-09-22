@@ -15,22 +15,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Adds a Custom "attachmenturl" Tag
  * @description: This function creates a custom Give email template tag
- *
- * @param $payment_id
  */
-
-function givera_attachment_tag( $payment_id ) {
-
-	give_add_email_tag( 'attachmenturl', 'This outputs the url of the attachment for the relevant form', 'givera_attachment_data' );
-
-}
-
-add_action( 'give_add_email_tags', 'givera_attachment_tag' );
+add_action( 'give_add_email_tags', function () {
+	give()->email_tags->add(
+		[
+			'tag'     => 'attachmenturl',
+			'desc'    => esc_html__( 'This outputs the url of the attachment for the relevant form', 'give' ),
+			'func'    => 'givera_attachment_data',
+			'context' => 'donation',
+		]
+	);
+} );
 
 
 // Add URL to Payment Meta
-function givera_attachment_paymentmeta($payment_meta) {
-  $payment_meta['attachmenturl'] = get_post_meta( get_the_ID(), '_givera_attachment_url', true );
+function givera_attachment_paymentmeta( $payment_meta ) {
+	$payment_meta['attachmenturl'] = get_post_meta( get_the_ID(), '_givera_attachment_url', true );
 
 	return $payment_meta;
 
@@ -39,32 +39,35 @@ function givera_attachment_paymentmeta($payment_meta) {
 add_filter( 'give_payment_meta', 'givera_attachment_paymentmeta' );
 
 
-// Adds info to the email tag {attachmenturl}
-function givera_attachment_data( $payment_id ) {
-
-	$paymentmeta = give_get_payment_meta( $payment_id );
-
-	$formid = $paymentmeta['form_id'];
-
-	$downloadurl = get_post_meta($formid, '_givera_attachment_url');
-	$downloadtext = get_post_meta($formid, '_givera_link_text');
-	$getminimum = get_post_meta($formid, '_givera_min_amount');
-	$confirmationtitle = get_post_meta($formid, '_givera_confirmation_title');
-	
-	if (empty($getminimum)) {
-		$minimum = '0';
-	} else {
-		$minimum = $getminimum;
+/**
+ * Adds info to the email tag {attachmenturl}
+ *
+ * @unreleased
+ *
+ * @param array $tag_args
+ *
+ * @return string
+ */
+function givera_attachment_data( $tag_args ) {
+	if ( ! give_check_variable( $tag_args, 'isset', 0, 'payment_id' ) ) {
+		return '';
 	}
-	
-	//Normalize these amounts for proper comparison
-	$paymentamount = html_entity_decode( give_donation_amount( $payment_id ) );
-	$donation = preg_replace("/([^0-9\\.])/i", "", $paymentamount);
-	
-	
+
+	$payment_id = absint( $tag_args['payment_id'] );
+	$payment    = new Give_Payment( $payment_id );
+
+	if ( ! $payment->ID ) {
+		return '';
+	}
+
+	$downloadurl  = get_post_meta( $payment->form_id, '_givera_attachment_url' );
+	$downloadtext = get_post_meta( $payment->form_id, '_givera_link_text' );
+	$getminimum   = get_post_meta( $payment->form_id, '_givera_min_amount' );
+	$minimum      = empty( $getminimum ) ? 0 : $getminimum;
+
 	// Otherwise check whether it meets minimum donation requirement
 	// then output accordingly.
-	if ($downloadurl && ($donation >= $minimum[0]) ) {
+	if ( $downloadurl && ( $payment->total >= $minimum[0] ) ) {
 		$output = '<a href="';
 		$output .= $downloadurl[0];
 		$output .= '">';

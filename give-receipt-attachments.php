@@ -41,17 +41,19 @@ if ( ! defined( 'GIVERA_VERSION' ) ) {
 // If not, it bails with an Admin notice as to why. 
 // If so, it loads the necessary files and scripts
 
-add_action( 'init', 'givera_plugin_init' );
+add_action( 'give_init', 'givera_plugin_init' );
 
 function givera_plugin_init() {
 
-	if ( current_user_can( 'activate_plugins' ) && !class_exists('Give') ) {
+	if ( current_user_can( 'activate_plugins' ) && ! class_exists( 'Give' ) ) {
 
 		add_action( 'admin_notices', 'givera_no_give_admin_notice' );
 		add_action( 'admin_init', 'givera_deactivate' );
 
-	} elseif ( class_exists('Give') &&
-	           version_compare( GIVE_VERSION, GIVERA_MIN_GIVE_VER, '<'  ) ) {
+	} elseif (
+		class_exists( 'Give' ) &&
+		version_compare( GIVE_VERSION, GIVERA_MIN_GIVE_VER, '<' )
+	) {
 
 		add_action( 'admin_notices', 'givera_min_give_admin_notice' );
 		add_action( 'admin_init', 'givera_deactivate' );
