@@ -29,7 +29,7 @@ if ( ! defined( 'GIVERA_BASENAME' ) ) {
 
 // Defines the minimum Give version for GIVE_RA to run
 if ( ! defined( 'GIVERA_MIN_GIVE_VER' ) ) {
-	define( 'GIVERA_MIN_GIVE_VER', '2.0' );
+	define( 'GIVERA_MIN_GIVE_VER', '2.13.4' );
 }
 
 // Defines Add-on Version number for easy reference
