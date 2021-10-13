@@ -92,6 +92,9 @@ Please know that all donations generated through my website go to support the wo
 
 == Changelog ==
 
+= 1.1.3 (Oct 2021) = 
+* Make sure the `{attachmenturl}` email tag always renders correctly. 
+
 = 1.1.2 (July 2020) = 
 * Hotfix to prevent the add-on from indicating it needs a license key.
 
