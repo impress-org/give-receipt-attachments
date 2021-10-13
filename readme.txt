@@ -3,7 +3,7 @@ Contributors: webdevmattcrom, givewp
 Donate link: https://givewp.com/free-addon-receipt-attachments-for-givewp
 Tags: givewp, donation, donations, attachment, receipt
 Requires at least: 4.0
-Tested up to: 5.4
+Tested up to: 5.8
 Stable tag: 1.1.3
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.en.html
